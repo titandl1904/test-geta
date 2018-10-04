@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Testing</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="description" content="Testing">
+
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+
+</head>
+
+<body>
+    <h1 id="testId"></h1>
+    <script>
+
+        function httpGetAsync(theUrl, callback, callbackErr)
+        {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() { 
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    callback(xmlHttp.responseText);
+                } else {
+                    callbackErr(xmlHttp.responseText);
+                }
+            }
+            xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+            xmlHttp.send(null);
+        }
+        const demo =  document.getElementById("testId");
+        httpGetAsync('https://api.openweathermap.org/data/2.5/weather?appid=39f5d9d1b122aeccc03396a0537bb7ed&id=2172797&callback=test', 
+        (res) => {
+            demo.innerHTML = res;
+            console.log(res);
+        },
+        (err) => {
+            demo.innerHTML = err;
+            console.log(err);
+        })
+
+    </script>
+
+</body>
+
+</html>

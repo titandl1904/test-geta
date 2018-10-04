@@ -1,0 +1,29 @@
+TASK 2
+
+SOLUTIONS
+In my opinion, we need to redesign this layout to adapt for mobile and tablet design
+- Menu for Dashboard > Main > Home should be change to hamburger menu, search button, input should in the bottom of hamburder menu.
+The hamburger menu should be always in the top when user scroll down
+- The menu under menu right (Welcome Peldi - History - ...) should be inside hamburger menu
+- we should change the left menu (Page operations, browse space, add content) to button and stay on the top, so user can switch these page by click this each button
+- Content inside Main we need to handle responsive to make sure the image will responsive
+- Add button to scroll up
+
+BEST PRACTICE
+- If we need to increase load time, in Front end we need to use image srcset and Backeend will crop image for each resolution:
+  + Small devices (landscape phones, 576px and up)
+  + Medium devices (tablets, 768px and up)
+  + Large devices (desktops, 992px and up)
+  + Extra large devices (large desktops, 1200px and up)
+
+to make sure we don't load the big image in mobile device.
+Use lazy load to load image
+
+- If we already have the website but this website didn't responsive, we can style for large desktops > desktops > tablets > phones
+- If we start project, we can use mobile first
+- Don't seperate too much media-breakpoint if unneeded
+- Don't use too much CSS3 if we need to support old browser (flex, grid, animation ...)
+
+TASK 2
+
+
