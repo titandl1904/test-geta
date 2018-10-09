@@ -12,8 +12,8 @@ Tools needed to run this app:
 
 2. Install packages defined in package.json locally:
 
-    `npm install`
-    `npm install start` start development
-    `npm install build` build production
-    `npm install test` run unit test
+- Running `npm install` to install dependencies
+- Running `npm install start` start development
+- Running `npm install build` build production
+- Running `npm install test` run unit test
 
