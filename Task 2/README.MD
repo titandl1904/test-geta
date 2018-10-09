@@ -1,6 +1,7 @@
-#https://github.com/facebook/create-react-app
+# Reference:
+https://github.com/facebook/create-react-app
 
-#Language use
+# Language use
 Project uses `es6`, `javascript`, `react-bootstrap`.
 
 # Dependencies
